@@ -16,11 +16,10 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: './src/setupTests.js',
-    coverage: {
-      reporter: ['text', 'json', 'html'],
-    },
+    include: ['**/*.{test,spec}.{js,ts,jsx,tsx}'],
+    exclude: ['**/node_modules/**', '**/dist/**'],
   },
+
 
   // Server configuration
   server: {
